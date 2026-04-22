@@ -26,15 +26,15 @@
       <div class="logo-main">GREEN<span>FIELD</span></div>
       <div class="logo-tag">landscaping co.</div>
     </a>
-    <nav class="nav">
+    <nav class="nav" id="primary-nav">
       <a href="#" class="active">Home <span class="nav-caret">▼</span></a>
-      <a href="#">About <span class="nav-caret">▼</span></a>
-      <a href="#">Services <span class="nav-caret">▼</span></a>
-      <a href="#">Portfolio</a>
-      <a href="#">Blog</a>
+      <a href="#about">About <span class="nav-caret">▼</span></a>
+      <a href="#services">Services <span class="nav-caret">▼</span></a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#tips">Blog</a>
       <a href="#quote">Contact</a>
     </nav>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button type="button" class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -56,7 +56,7 @@
 </section>
 
 <!-- INTRO / PROCESS -->
-<section class="intro">
+<section class="intro" id="about">
   <div class="container">
     <div class="intro-grid">
       <div class="intro-left">
@@ -142,7 +142,7 @@
 </section>
 
 <!-- NEWS -->
-<section class="news">
+<section class="news" id="tips">
   <div class="container">
     <div class="news-grid">
       <div class="news-intro">
@@ -172,7 +172,7 @@
   <div class="container">
     <h2><span class="green">Our Core</span> Landscape Services.</h2>
     <p class="subhead">Full-service landscape &amp; lawn care under one roof</p>
-    <div class="portfolio-grid">
+    <div class="portfolio-grid" id="portfolio">
       <div class="port-card">
         <div class="port-imgwrap"><picture><source srcset="/images/img12.avif" type="image/avif"><img src="/images/img12.png" alt="Landscape design" loading="lazy" width="500" height="500"></picture></div>
         <span class="cat">Plan &amp; Plant</span>
@@ -451,10 +451,10 @@
     <div class="ft-top">
       <div class="ft-nav">
         <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Blog</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#tips">Blog</a>
         <a href="#quote">Contact</a>
       </div>
       <div class="ft-social">
@@ -507,4 +507,23 @@
 
 <script>
   document.querySelectorAll('form').forEach(f => f.addEventListener('submit', e => e.preventDefault()));
+
+  (function () {
+    const header = document.querySelector('header.header');
+    const burger = header && header.querySelector('.burger');
+    const nav = header && header.querySelector('#primary-nav');
+    if (!header || !burger || !nav) return;
+    burger.addEventListener('click', function () {
+      const open = header.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open);
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        header.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  })();
 </script>

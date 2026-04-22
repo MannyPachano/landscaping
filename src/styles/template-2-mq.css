@@ -6,7 +6,8 @@
   .hero-card { padding: 44px 44px; margin-left: 40px; max-width: 500px; }
   .hero-card h1 { font-size: 42px; }
   .intro { padding: 80px 0; }
-  .intro-grid { grid-template-columns: 1fr; gap: 60px; }
+  .intro-grid { grid-template-columns: 1fr; gap: 60px; align-items: start; }
+  .intro-photos { height: clamp(360px, 58vw, 560px); max-width: 600px; margin-inline: auto; }
   .intro-left h2 { font-size: 36px; }
   .news-grid { grid-template-columns: 1fr 1fr; }
   .news-intro { grid-column: 1 / -1; }
@@ -26,7 +27,27 @@
 
 @media (max-width: 768px) {
   .topbar { display: none; }
-  .nav { display: none; }
+  .header-inner { flex-wrap: wrap; row-gap: 0; align-items: center; }
+  .header .logo { order: 1; }
+  .header .burger { order: 2; margin-left: auto; }
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    flex-basis: 100%;
+    order: 3;
+    gap: 0;
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid var(--grey-warm);
+  }
+  .nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--grey-warm);
+  }
+  .nav a::after { display: none; }
+  .header.is-open .nav { display: flex; }
   .burger { display: flex; }
   .hero { height: 560px; }
   .hero-card { margin: 0 16px; padding: 32px 26px; max-width: calc(100% - 32px); }
@@ -41,7 +62,7 @@
   .intro { padding: 60px 0; }
   .intro-left h2 { font-size: 28px; }
   .process-grid { grid-template-columns: 1fr; gap: 28px; }
-  .intro-photos { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .intro-photos { grid-template-columns: 1fr 1fr; gap: 10px; height: clamp(340px, 65vw, 480px); max-width: none; margin-inline: 0; }
   .intro-photo-col { gap: 10px; }
   .tiles-3up { grid-template-columns: 1fr; }
   .tile { padding: 48px 32px; min-height: 320px; }

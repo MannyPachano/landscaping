@@ -24,7 +24,7 @@
         <div class="logo-sub">Landscaping Co.</div>
       </div>
     </a>
-    <ul class="nav-links">
+    <ul id="primary-nav" class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -32,7 +32,10 @@
       <li><a href="#tips">Tips</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#quote" class="nav-cta">Get A Free Quote →</a>
+    <div class="nav-tray">
+      <button type="button" class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <a href="#quote" class="nav-cta"><span class="nav-cta-label nav-cta-label--long">Get A Free Quote →</span><span class="nav-cta-label nav-cta-label--short">Free Quote →</span></a>
+    </div>
   </div>
 </nav>
 
@@ -691,5 +694,25 @@
       });
     });
   });
+
+  (function () {
+    const nav = document.querySelector('nav.mainnav');
+    if (!nav) return;
+    const btn = nav.querySelector('.nav-burger');
+    const list = nav.querySelector('#primary-nav');
+    if (!btn || !list) return;
+    btn.addEventListener('click', function () {
+      const open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    list.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  })();
 </script>
 
