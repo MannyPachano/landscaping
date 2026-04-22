@@ -1,2 +1,12 @@
+@import '@fontsource/roboto-slab/latin-400.css';
+@import '@fontsource/roboto-slab/latin-600.css';
+@import '@fontsource/roboto-slab/latin-700.css';
+@import '@fontsource/roboto-slab/latin-800.css';
+@import '@fontsource/libre-baskerville/latin-400.css';
+@import '@fontsource/libre-baskerville/latin-400-italic.css';
+@import '@fontsource/nunito-sans/latin-300.css';
+@import '@fontsource/nunito-sans/latin-400.css';
+@import '@fontsource/nunito-sans/latin-600.css';
+@import '@fontsource/nunito-sans/latin-700.css';
 @import './template-2-core.css';
 @import './template-2-mq.css';

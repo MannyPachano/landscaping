@@ -6,9 +6,6 @@ import TemplatePicker from '../components/TemplatePicker.astro';
 const title = 'Greenfield Landscaping — Beautiful landscapes, made simple.';
 const description =
   'Full-service landscape design, installation, lawn maintenance, hardscapes, and lighting from a local team. Free quotes.';
-const fontHref =
-  'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600;700&family=Caveat:wght@400;600&display=swap';
-
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 ---
 
@@ -32,10 +29,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href={fontHref} rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href={fontHref} rel="stylesheet" /></noscript>
   </head>
   <body>
     <TemplatePicker currentPath={Astro.url.pathname} />

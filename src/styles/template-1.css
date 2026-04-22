@@ -1,3 +1,14 @@
+@import '@fontsource/playfair-display/latin-400.css';
+@import '@fontsource/playfair-display/latin-500.css';
+@import '@fontsource/playfair-display/latin-600.css';
+@import '@fontsource/poppins/latin-300.css';
+@import '@fontsource/poppins/latin-400.css';
+@import '@fontsource/poppins/latin-500.css';
+@import '@fontsource/poppins/latin-600.css';
+@import '@fontsource/caveat/latin-400.css';
+@import '@fontsource/caveat/latin-500.css';
+@import '@fontsource/caveat/latin-600.css';
+
 :root {
   --green: #7ba428;
   --green-dark: #5d8a1a;
@@ -85,6 +96,11 @@ nav.mainnav { background: #fff; padding: 22px 0; position: sticky; top: 0; z-ind
   object-position: center;
   transform: scale(1.05);
   animation: zoom 20s ease-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-img {
+    animation: none;
+  }
 }
 @keyframes zoom { to { transform: scale(1.15); } }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(20,35,20,.7) 0%, rgba(20,35,20,.3) 50%, rgba(20,35,20,.1) 100%); }

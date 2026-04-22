@@ -11,6 +11,14 @@
     "optimize:images": "node scripts/optimize-lcp-images.mjs"
   },
   "dependencies": {
+    "@fontsource/caveat": "^5.2.8",
+    "@fontsource/dm-serif-display": "^5.2.8",
+    "@fontsource/jost": "^5.2.8",
+    "@fontsource/libre-baskerville": "^5.2.10",
+    "@fontsource/nunito-sans": "^5.2.7",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
+    "@fontsource/roboto-slab": "^5.2.8",
     "astro": "^5.7.0"
   },
   "devDependencies": {

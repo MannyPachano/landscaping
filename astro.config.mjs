@@ -10,7 +10,7 @@ export default defineConfig({
   site,
   compressHTML: true,
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
   vite: {
     build: {
