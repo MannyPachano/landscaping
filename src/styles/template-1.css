@@ -54,7 +54,7 @@ nav.mainnav { background: #fff; padding: 22px 0; position: sticky; top: 0; z-ind
 .nav-cta:hover { background: var(--green-dark); color: #fff !important; }
 
 .hero { position: relative; height: 720px; overflow: hidden; background: #2a3b2a; }
-.hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1920&q=85'); background-size: cover; background-position: center; transform: scale(1.05); animation: zoom 20s ease-out infinite alternate; }
+.hero-bg { position: absolute; inset: 0; background-image: url('/images/img7.png'); background-image: image-set(url('/images/img7.avif') type('image/avif'), url('/images/img7.png') type('image/png')); background-size: cover; background-position: center; transform: scale(1.05); animation: zoom 20s ease-out infinite alternate; }
 @keyframes zoom { to { transform: scale(1.15); } }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(20,35,20,.7) 0%, rgba(20,35,20,.3) 50%, rgba(20,35,20,.1) 100%); }
 .hero-inner { position: relative; height: 100%; max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; justify-content: center; color: #fff; }
@@ -80,6 +80,7 @@ nav.mainnav { background: #fff; padding: 22px 0; position: sticky; top: 0; z-ind
 
 .intro-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
 .intro-img { position: relative; aspect-ratio: 4/5; overflow: hidden; border-radius: 2px; }
+.intro-img > picture { display: contents; }
 .intro-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s; }
 .intro-img:hover img { transform: scale(1.04); }
 
@@ -96,6 +97,7 @@ nav.mainnav { background: #fff; padding: 22px 0; position: sticky; top: 0; z-ind
 .services-head p { max-width: 680px; margin: 0 auto; font-size: 16px; }
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .service-card { position: relative; aspect-ratio: 3/4; overflow: hidden; cursor: pointer; border-radius: 2px; }
+.service-card > picture { display: contents; }
 .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
 .service-card:hover img { transform: scale(1.08); }
 .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(20,35,20,.85) 100%); transition: background .4s; z-index: 1; }
