@@ -32,12 +32,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
+    <link rel="preload" as="image" href="/images/img7.avif" type="image/avif" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href={fontHref} rel="stylesheet" />
+    <link href={fontHref} rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href={fontHref} rel="stylesheet" /></noscript>
   </head>
   <body>
     <TemplatePicker currentPath={Astro.url.pathname} />
-    <Fragment set:html={bodyHtml} />
+    <main id="main-content">
+      <Fragment set:html={bodyHtml} />
+    </main>
   </body>
 </html>

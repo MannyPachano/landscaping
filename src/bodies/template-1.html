@@ -42,7 +42,12 @@
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" aria-hidden="true">
+    <picture>
+      <source srcset="/images/img7.avif" type="image/avif">
+      <img class="hero-bg-img" src="/images/img7.png" alt="" width="1400" height="788" decoding="async" fetchpriority="high" sizes="100vw">
+    </picture>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">Residential &amp; commercial landscape services</div>
@@ -54,8 +59,8 @@
     </div>
   </div>
   <div class="hero-info">
-    <h4>Call today</h4>
-    <p>(555) 123-4567</p>
+    <p class="hero-info-kicker">Call today</p>
+    <p class="hero-info-phone">(555) 123-4567</p>
   </div>
 </section>
 
@@ -65,7 +70,7 @@
       <div class="intro-img reveal">
         <picture>
           <source srcset="/images/img6.avif" type="image/avif">
-          <img src="/images/img6.png" alt="Professionally landscaped property" width="900" height="600" loading="lazy">
+          <img src="/images/img6.png" alt="Professionally landscaped property" width="900" height="600" loading="lazy" sizes="(max-width: 1024px) 100vw, 48vw">
         </picture>
       </div>
       <div class="reveal">
@@ -95,7 +100,7 @@
       <div class="service-card reveal">
         <picture>
           <source srcset="/images/img3.avif" type="image/avif">
-          <img src="/images/img3.png" alt="Landscape design and installation" width="800" height="533" loading="lazy">
+          <img src="/images/img3.png" alt="Landscape design and installation" width="800" height="533" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw">
         </picture>
         <div class="service-card-body">
           <div class="num">— 01</div>
@@ -107,7 +112,7 @@
       <div class="service-card reveal" style="transition-delay:.1s">
         <picture>
           <source srcset="/images/img8.avif" type="image/avif">
-          <img src="/images/img8.png" alt="Landscape installation" width="900" height="600" loading="lazy">
+          <img src="/images/img8.png" alt="Landscape installation" width="900" height="600" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw">
         </picture>
         <div class="service-card-body">
           <div class="num">— 02</div>
@@ -164,27 +169,27 @@
     <div class="icon-services-grid">
       <div class="icon-service reveal">
         <div class="icon-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18h18M5 18v-6a7 7 0 0 1 14 0v6"/><path d="M12 11V3"/></svg></div>
-        <div><h4>Weekly lawn care</h4><p>Mowing, edging, and blowing on a reliable schedule so your lawn always looks sharp.</p></div>
+        <div><h3 class="icon-service-title">Weekly lawn care</h3><p>Mowing, edging, and blowing on a reliable schedule so your lawn always looks sharp.</p></div>
       </div>
       <div class="icon-service reveal" style="transition-delay:.1s">
         <div class="icon-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M8 20V8M16 20V8M6 8c2-3 4-4 6-4s4 1 6 4"/></svg></div>
-        <div><h4>Patios &amp; walkways</h4><p>Stone and paver installations that add function and beauty to your outdoor space.</p></div>
+        <div><h3 class="icon-service-title">Patios &amp; walkways</h3><p>Stone and paver installations that add function and beauty to your outdoor space.</p></div>
       </div>
       <div class="icon-service reveal" style="transition-delay:.2s">
         <div class="icon-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M6 12c0-3 2-6 6-6s6 3 6 6M6 12c0 3 2 6 6 6s6-3 6-6"/></svg></div>
-        <div><h4>Planting &amp; beds</h4><p>Fresh plantings, seasonal color, mulch, and bed edging for year-round curb appeal.</p></div>
+        <div><h3 class="icon-service-title">Planting &amp; beds</h3><p>Fresh plantings, seasonal color, mulch, and bed edging for year-round curb appeal.</p></div>
       </div>
       <div class="icon-service reveal" style="transition-delay:.3s">
         <div class="icon-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c4 4 6 8 6 12a6 6 0 0 1-12 0c0-4 2-8 6-12z"/></svg></div>
-        <div><h4>Sod installation</h4><p>Fresh sod laid over properly prepped soil for an instant, healthy lawn.</p></div>
+        <div><h3 class="icon-service-title">Sod installation</h3><p>Fresh sod laid over properly prepped soil for an instant, healthy lawn.</p></div>
       </div>
       <div class="icon-service reveal" style="transition-delay:.4s">
         <div class="icon-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4 12H1M23 12h-3M6 6L4 4M20 20l-2-2M6 18l-2 2M20 6l-2 2"/></svg></div>
-        <div><h4>Landscape lighting</h4><p>Path, accent, and feature lighting that extends the beauty of your yard after sundown.</p></div>
+        <div><h3 class="icon-service-title">Landscape lighting</h3><p>Path, accent, and feature lighting that extends the beauty of your yard after sundown.</p></div>
       </div>
       <div class="icon-service reveal" style="transition-delay:.5s">
         <div class="icon-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="4" r="1.5"/><circle cx="12" cy="20" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/></svg></div>
-        <div><h4>Seasonal cleanups</h4><p>Spring and fall cleanups to keep your property tidy through every season of the year.</p></div>
+        <div><h3 class="icon-service-title">Seasonal cleanups</h3><p>Spring and fall cleanups to keep your property tidy through every season of the year.</p></div>
       </div>
     </div>
   </div>
@@ -210,22 +215,22 @@
     <div class="seasons-grid">
       <div class="season-card reveal">
         <div class="season-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V12M12 12c0-4 2-8 6-8M12 12c0-4-2-8-6-8M12 12c-3 0-6 2-6 5"/></svg></div>
-        <h4>Spring</h4>
+        <h3 class="season-card-title">Spring</h3>
         <p>Seasonal cleanup, bed refresh, fresh mulch, and planning for the growing season.</p>
       </div>
       <div class="season-card reveal" style="transition-delay:.1s">
         <div class="season-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></div>
-        <h4>Summer</h4>
+        <h3 class="season-card-title">Summer</h3>
         <p>Weekly mowing, planting, and prime season for patios, walkways, and outdoor builds.</p>
       </div>
       <div class="season-card reveal" style="transition-delay:.2s">
         <div class="season-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l3 6h3l3-6M9 10v8M15 10v8M6 22h12"/></svg></div>
-        <h4>Fall</h4>
+        <h3 class="season-card-title">Fall</h3>
         <p>Leaf removal, seasonal cleanup, aeration and overseeding for a healthier spring.</p>
       </div>
       <div class="season-card reveal" style="transition-delay:.3s">
         <div class="season-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M4 7l16 10M4 17L20 7M2 12h20"/></svg></div>
-        <h4>Winter</h4>
+        <h3 class="season-card-title">Winter</h3>
         <p>Dormant pruning, bed maintenance, and planning ahead for next year's landscape.</p>
       </div>
     </div>
@@ -342,8 +347,8 @@
           <input type="email" placeholder="you@example.com">
         </div>
         <div class="form-row">
-          <label>Service needed</label>
-          <select>
+          <label for="contact-service">Service needed</label>
+          <select id="contact-service" name="service">
             <option>Landscape design</option>
             <option>Installation</option>
             <option>Lawn maintenance</option>

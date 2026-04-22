@@ -7,10 +7,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "optimize:images": "node scripts/optimize-lcp-images.mjs"
   },
   "dependencies": {
     "astro": "^5.7.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   },
   "engines": {
     "node": ">=20"
