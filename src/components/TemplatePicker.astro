@@ -1,0 +1,87 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const items = [
+  { href: '/', label: 'Template 1' },
+  { href: '/template-2/', label: 'Template 2' },
+  { href: '/template-3/', label: 'Template 3' },
+] as const;
+
+function normalizePath(p: string): string {
+  const t = p.replace(/\/$/, '');
+  return t === '' ? '/' : t;
+}
+
+const active = normalizePath(currentPath);
+---
+
+<nav class="tpl-nav" aria-label="Design templates">
+  <span class="tpl-nav-label">Layouts</span>
+  {
+    items.map((item) => {
+      const isActive = normalizePath(item.href) === active;
+      return (
+        <a
+          href={item.href}
+          class:list={['tpl-nav-link', { 'tpl-nav-link--active': isActive }]}
+        >
+          {item.label}
+        </a>
+      );
+    })
+  }
+</nav>
+<style>
+  .tpl-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    background: rgba(26, 36, 24, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+  }
+  .tpl-nav-label {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .tpl-nav-link {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .tpl-nav-link:hover {
+    background: rgba(123, 164, 40, 0.35);
+    color: #fff;
+  }
+  .tpl-nav-link--active {
+    background: #7ba428;
+    color: #fff;
+    font-weight: 600;
+  }
+</style>
+
+<style is:global>
+  body {
+    padding-bottom: max(52px, calc(48px + env(safe-area-inset-bottom)));
+  }
+</style>

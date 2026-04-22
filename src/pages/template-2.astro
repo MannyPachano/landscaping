@@ -1,0 +1,44 @@
+---
+import '../styles/template-2.css';
+import bodyHtml from '../bodies/template-2.html?raw';
+import TemplatePicker from '../components/TemplatePicker.astro';
+
+const title =
+  "Atlanta Professional Landscaping — Atlanta Metro's Trusted Landscape Company Since 2006";
+const description =
+  'Full-service landscaping for Atlanta: design, installation, maintenance, hardscapes, irrigation, and commercial services.';
+const fontHref =
+  'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&family=Libre+Baskerville:ital@0;1&family=Nunito+Sans:wght@300;400;600;700&display=swap';
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href={fontHref} rel="stylesheet" />
+  </head>
+  <body>
+    <TemplatePicker currentPath={Astro.url.pathname} />
+    <Fragment set:html={bodyHtml} />
+  </body>
+</html>
