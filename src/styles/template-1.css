@@ -54,7 +54,7 @@ nav.mainnav { background: #fff; padding: 22px 0; position: sticky; top: 0; z-ind
 .nav-cta:hover { background: var(--green-dark); color: #fff !important; }
 
 .hero { position: relative; height: 720px; overflow: hidden; background: #2a3b2a; }
-.hero-bg { position: absolute; inset: 0; background-image: url('https://static.wixstatic.com/media/63861c_3cfc3c209c884a89ad031c739eda3055~mv2_d_3318_2212_s_2.jpg/v1/fill/w_1960,h_1306,al_c,q_90,usm_0.66_1.00_0.01/63861c_3cfc3c209c884a89ad031c739eda3055~mv2_d_3318_2212_s_2.jpg'); background-size: cover; background-position: center; transform: scale(1.05); animation: zoom 20s ease-out infinite alternate; }
+.hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1920&q=85'); background-size: cover; background-position: center; transform: scale(1.05); animation: zoom 20s ease-out infinite alternate; }
 @keyframes zoom { to { transform: scale(1.15); } }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(20,35,20,.7) 0%, rgba(20,35,20,.3) 50%, rgba(20,35,20,.1) 100%); }
 .hero-inner { position: relative; height: 100%; max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; justify-content: center; color: #fff; }

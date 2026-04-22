@@ -1,0 +1,84 @@
+@media (max-width: 1024px) {
+  .container { padding: 0 24px; }
+  .nav { gap: 22px; }
+  .nav a { font-size: 13px; }
+  .hero { height: 580px; }
+  .hero-card { padding: 44px 44px; margin-left: 40px; max-width: 500px; }
+  .hero-card h1 { font-size: 42px; }
+  .intro { padding: 80px 0; }
+  .intro-grid { grid-template-columns: 1fr; gap: 60px; }
+  .intro-left h2 { font-size: 36px; }
+  .news-grid { grid-template-columns: 1fr 1fr; }
+  .news-intro { grid-column: 1 / -1; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+  .features-grid { grid-template-columns: 1fr; gap: 32px; }
+  .why-grid { grid-template-columns: 1fr; gap: 48px; max-width: 500px; margin: 0 auto; }
+  .quote-split { grid-template-columns: 1fr; }
+  .quote-photo { min-height: 340px; }
+  .quote-form-side { padding: 60px 40px; }
+  .testi-grid { grid-template-columns: 1fr; gap: 48px; }
+  .testi-right { max-width: 420px; }
+  .team-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .feat3-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ft-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .ft-col.wide { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+  .topbar { display: none; }
+  .nav { display: none; }
+  .burger { display: flex; }
+  .hero { height: 560px; }
+  .hero-card { margin: 0 16px; padding: 32px 26px; max-width: calc(100% - 32px); }
+  .hero-card .eyebrow { text-align: center; font-size: 15px; }
+  .hero-card h1 { font-size: 32px; text-align: center; }
+  .hero-card p { text-align: center; font-size: 14px; margin-bottom: 22px; }
+  .hero-buttons { flex-direction: column; gap: 10px; }
+  .btn { width: 100%; padding: 16px 22px; }
+  .hero { align-items: center; padding: 20px 0; }
+  .hero-arrows { top: auto; bottom: 30px; transform: none; }
+  .hero-arrow { width: 36px; height: 36px; }
+  .intro { padding: 60px 0; }
+  .intro-left h2 { font-size: 28px; }
+  .process-grid { grid-template-columns: 1fr; gap: 28px; }
+  .intro-photos { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .intro-photos .p2 { margin-top: 20px; }
+  .intro-photos .p4 { margin-top: -10px; }
+  .tiles-3up { grid-template-columns: 1fr; }
+  .tile { padding: 48px 32px; min-height: 320px; }
+  .news { padding: 60px 0; }
+  .news-grid { grid-template-columns: 1fr; gap: 40px; }
+  .news-intro h2 { font-size: 28px; }
+  .portfolio { padding: 60px 0; }
+  .portfolio h2, .why h2, .team h2, .feat3 h2 { font-size: 30px; }
+  .portfolio-grid { grid-template-columns: 1fr; gap: 20px; }
+  .features-strip { padding: 60px 0; }
+  .feature { grid-template-columns: 60px 1fr; gap: 18px; }
+  .feature-icon { width: 56px; height: 56px; }
+  .feature h3 { font-size: 18px; }
+  .why { padding: 70px 0 60px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-card { padding: 60px 26px 32px; }
+  .quote-form-side { padding: 48px 26px; }
+  .quote-form-side h2 { font-size: 28px; }
+  .quote-photo-overlay { left: 20px; right: 20px; max-width: none; padding: 26px 28px; }
+  .quote-photo-overlay h3 { font-size: 24px; }
+  .testi { padding: 60px 0; }
+  .testi-left { padding-right: 0; }
+  .testi-head h2 { font-size: 26px; }
+  .call-strip { padding: 60px 0; }
+  .call-card { padding: 36px 26px; }
+  .call-card h2 { font-size: 24px; }
+  .phone-num { font-size: 22px; }
+  .team { padding: 70px 0 60px; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .feat3 { padding: 60px 0; }
+  .feat3-ctas { flex-direction: column; align-items: center; gap: 10px; }
+  .feat3-ctas .btn { width: 260px; }
+  footer { padding: 50px 0 0; }
+  .ft-top { flex-direction: column; gap: 24px; padding-bottom: 28px; margin-bottom: 36px; }
+  .ft-nav { flex-wrap: wrap; justify-content: center; gap: 18px 22px; }
+  .ft-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 32px; }
+  .ft-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  .ft-bottom div:last-child a:first-child { margin-left: 0; }
+}
