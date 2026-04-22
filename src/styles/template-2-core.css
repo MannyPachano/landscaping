@@ -108,18 +108,17 @@ h1, h2, h3, h4, h5 {
 .step-line { flex: 1; height: 1px; background: var(--gold); }
 .process-step h3 { font-size: 19px; margin-bottom: 8px; }
 .process-step p { color: var(--text-soft); font-size: 14px; line-height: 1.7; }
-.intro-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: start; }
+/* Two columns of stacked images so row heights aren't coupled (avoids huge gaps / clipping). */
+.intro-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.intro-photo-col { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .intro-photos .photo-wrap { overflow: hidden; position: relative; }
 .intro-photos .photo-wrap > picture { display: contents; }
 .intro-photos .photo-wrap img { width: 100%; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
 .intro-photos .photo-wrap::after { content: ""; position: absolute; inset: 0; background: rgba(124,179,66,0); transition: background 0.4s ease; pointer-events: none; }
 .intro-photos .photo-wrap:hover img { transform: scale(1.06); }
-.intro-photos .photo-wrap:hover::after { background: rgba(124,179,66,0.12); }
 .intro-photos .p1 img { aspect-ratio: 4/3; object-fit: cover; }
-.intro-photos .p2 { margin-top: 40px; }
 .intro-photos .p2 img { aspect-ratio: 3/4; object-fit: cover; }
 .intro-photos .p3 img { aspect-ratio: 3/4; object-fit: cover; }
-.intro-photos .p4 { margin-top: -30px; }
 .intro-photos .p4 img { aspect-ratio: 4/3; object-fit: cover; }
 
 /* 3-UP TILES */

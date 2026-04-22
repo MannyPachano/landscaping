@@ -42,8 +42,7 @@
   .intro-left h2 { font-size: 28px; }
   .process-grid { grid-template-columns: 1fr; gap: 28px; }
   .intro-photos { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .intro-photos .p2 { margin-top: 20px; }
-  .intro-photos .p4 { margin-top: -10px; }
+  .intro-photo-col { gap: 10px; }
   .tiles-3up { grid-template-columns: 1fr; }
   .tile { padding: 48px 32px; min-height: 320px; }
   .news { padding: 60px 0; }
