@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlanta Professional Landscaping — Atlanta Metro's Trusted Landscape Company Since 2006</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&family=Libre+Baskerville:ital@0;1&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green: #7CB342;
+  --green-dark: #689F38;
+  --green-light: #8FC350;
+  --brown: #3E2E28;
+  --brown-light: #4D3A32;
+  --gold: #B8924A;
+  --gold-light: #C9A35E;
+  --cream: #F5EFE6;
+  --cream-dark: #EDE4D3;
+  --grey-warm: #E8E3DB;
+  --text: #2B2520;
+  --text-soft: #7B736C;
+  --white: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--white);
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+/* TOP BAR */
+.topbar { background: var(--white); font-size: 13px; color: var(--text-soft); border-bottom: 1px solid var(--grey-warm); padding: 10px 0; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; }
+.topbar-left a { color: var(--text-soft); text-decoration: none; }
+.topbar-right { display: flex; align-items: center; gap: 18px; font-size: 13px; }
+.topbar-right .social { display: flex; gap: 12px; }
+.topbar-right .social a { color: var(--text-soft); width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; }
+.topbar-right .divider { color: var(--grey-warm); }
+.topbar-right .link { color: var(--text); font-weight: 600; text-decoration: none; }
+.topbar-right .link.green { color: var(--green-dark); }
+
+/* HEADER */
+.header { background: var(--white); padding: 20px 0; position: relative; z-index: 50; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.logo { text-decoration: none; }
+.logo-main { font-family: 'Roboto Slab', serif; font-weight: 800; font-size: 22px; letter-spacing: 0.02em; color: var(--text); line-height: 1; }
+.logo-main span { color: var(--green); }
+.logo-tag { font-family: 'Libre Baskerville', serif; font-style: italic; font-size: 12px; color: var(--gold); letter-spacing: 0.06em; margin-top: 2px; text-align: right; padding-right: 4px; }
+.nav { display: flex; align-items: center; gap: 36px; }
+.nav a { text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; transition: color 0.25s ease; position: relative; padding-bottom: 6px; }
+.nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--green); transition: width 0.3s cubic-bezier(0.25,0.46,0.45,0.94); }
+.nav a:hover, .nav a.active { color: var(--green); }
+.nav a:hover::after, .nav a.active::after { width: 100%; }
+.nav-caret { font-size: 10px; margin-left: 3px; opacity: 0.5; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+.burger span { width: 28px; height: 2px; background: var(--text); }
+
+/* HERO */
+.hero { position: relative; height: 680px; background: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; display: flex; align-items: center; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.12), rgba(0,0,0,0.25)); }
+.hero-card { position: relative; background: rgba(255,255,255,0.94); backdrop-filter: blur(6px); padding: 56px 60px; max-width: 620px; margin-left: 80px; box-shadow: 0 30px 80px rgba(0,0,0,0.15); animation: fadeUp 0.9s 0.1s both ease-out; }
+.hero-card .eyebrow { font-size: 17px; margin-bottom: 14px; color: var(--gold); }
+.hero-card h1 { font-size: 58px; line-height: 1.05; letter-spacing: -0.02em; text-transform: uppercase; color: var(--text); margin-bottom: 22px; font-weight: 800; }
+.hero-card p { font-size: 16px; color: var(--text-soft); margin-bottom: 32px; max-width: 500px; line-height: 1.7; }
+.hero-buttons { display: flex; gap: 14px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; border: none; transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94); position: relative; overflow: hidden; }
+.btn::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: rgba(255,255,255,0.15); transition: left 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
+.btn:hover::before { left: 100%; }
+.btn > * { position: relative; z-index: 1; }
+.btn-green { background: var(--green); color: var(--white); box-shadow: 0 4px 12px rgba(124,179,66,0.25); }
+.btn-green:hover { background: var(--green-dark); transform: translateY(-3px); box-shadow: 0 10px 22px rgba(124,179,66,0.4); }
+.btn-brown { background: var(--brown); color: var(--white); box-shadow: 0 4px 12px rgba(62,46,40,0.2); }
+.btn-brown:hover { background: var(--green); transform: translateY(-3px); box-shadow: 0 10px 22px rgba(124,179,66,0.4); }
+.btn-outline-green { border: 2px solid var(--green); color: var(--green); background: transparent; }
+.btn-outline-green:hover { background: var(--green); color: white; transform: translateY(-3px); box-shadow: 0 8px 18px rgba(124,179,66,0.3); }
+
+.hero-arrows { position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 20px; pointer-events: none; }
+.hero-arrow { width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.85); display: flex; align-items: center; justify-content: center; color: var(--text); pointer-events: auto; cursor: pointer; border: none; transition: all 0.2s; }
+.hero-arrow:hover { background: var(--green); color: white; }
+
+/* INTRO / PROCESS */
+.intro { padding: 110px 0; background: var(--white); }
+.intro-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; }
+.intro-left h2 { font-size: 44px; line-height: 1.1; margin-bottom: 24px; color: var(--text); }
+.intro-left > p { color: var(--text-soft); margin-bottom: 48px; font-size: 15px; line-height: 1.8; }
+.process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 40px; margin-bottom: 40px; }
+.process-step .step-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.step-num { width: 32px; height: 32px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+.step-line { flex: 1; height: 1px; background: var(--gold); }
+.process-step h3 { font-size: 19px; margin-bottom: 8px; }
+.process-step p { color: var(--text-soft); font-size: 14px; line-height: 1.7; }
+.intro-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: start; }
+.intro-photos .photo-wrap { overflow: hidden; position: relative; }
+.intro-photos .photo-wrap img { width: 100%; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+.intro-photos .photo-wrap::after { content: ""; position: absolute; inset: 0; background: rgba(124,179,66,0); transition: background 0.4s ease; pointer-events: none; }
+.intro-photos .photo-wrap:hover img { transform: scale(1.06); }
+.intro-photos .photo-wrap:hover::after { background: rgba(124,179,66,0.12); }
+.intro-photos .p1 img { aspect-ratio: 4/3; object-fit: cover; }
+.intro-photos .p2 { margin-top: 40px; }
+.intro-photos .p2 img { aspect-ratio: 3/4; object-fit: cover; }
+.intro-photos .p3 img { aspect-ratio: 3/4; object-fit: cover; }
+.intro-photos .p4 { margin-top: -30px; }
+.intro-photos .p4 img { aspect-ratio: 4/3; object-fit: cover; }
+
+/* 3-UP TILES */
+.tiles-3up { display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 360px; }
+.tile { position: relative; padding: 60px 48px; color: white; display: flex; flex-direction: column; justify-content: center; overflow: hidden; background-size: cover; background-position: center; cursor: pointer; }
+.tile::before { content: ""; position: absolute; inset: 0; transition: opacity 0.4s ease; }
+.tile:hover::before { opacity: 0.82; }
+.tile-green { background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80'); }
+.tile-green::before { background: linear-gradient(135deg, rgba(124,179,66,0.92), rgba(104,159,56,0.88)); }
+.tile-brown { background-image: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80'); }
+.tile-brown::before { background: linear-gradient(135deg, rgba(139,115,85,0.88), rgba(110,92,72,0.92)); }
+.tile-green2 { background-image: url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=800&q=80'); }
+.tile-green2::before { background: linear-gradient(135deg, rgba(143,195,80,0.90), rgba(124,179,66,0.90)); }
+.tile > * { position: relative; z-index: 1; }
+.tile-icon { width: 44px; height: 44px; margin-bottom: 24px; color: white; opacity: 0.95; transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.tile:hover .tile-icon { transform: translateY(-6px) rotate(-8deg) scale(1.08); }
+.tile .eyebrow { color: white; opacity: 0.85; font-style: italic; margin-bottom: 8px; font-size: 14px; }
+.tile h3 { color: white; font-size: 24px; margin-bottom: 18px; line-height: 1.25; }
+.tile p { font-size: 14px; line-height: 1.75; opacity: 0.92; margin-bottom: 22px; }
+.tile-read { color: white; text-decoration: none; font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; position: relative; padding-bottom: 6px; align-self: flex-start; }
+.tile-read::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px; background: white; transition: width 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
+.tile:hover .tile-read::after { width: 100%; }
+.tile-read span.arrow { transition: transform 0.3s ease; display: inline-block; }
+.tile:hover .tile-read span.arrow { transform: translateX(6px); }
+
+/* NEWS */
+.news { padding: 110px 0; background: var(--white); }
+.news-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: start; }
+.news-intro h2 { font-size: 36px; margin-bottom: 18px; }
+.news-intro p { color: var(--text-soft); font-size: 14px; margin-bottom: 28px; line-height: 1.75; }
+.news-card { cursor: pointer; }
+.news-card .news-imgwrap { width: 100%; aspect-ratio: 4/3; overflow: hidden; margin-bottom: 18px; position: relative; isolation: isolate; }
+.news-card .news-imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
+.news-card .news-imgwrap::before { content: ""; position: absolute; inset: 0; background: linear-gradient(20deg, rgba(124,179,66,0.55), rgba(124,179,66,0.15)); opacity: 0; transition: opacity 0.4s ease; z-index: 1; }
+.news-card:hover .news-imgwrap img { transform: scale(1.07); }
+.news-card:hover .news-imgwrap::before { opacity: 1; }
+.news-card h3 { font-size: 19px; line-height: 1.3; margin-bottom: 10px; transition: color 0.25s ease; }
+.news-card:hover h3 { color: var(--green-dark); }
+.news-meta { font-size: 13px; color: var(--text-soft); margin-bottom: 16px; }
+.news-meta .cat { color: var(--gold); font-style: italic; }
+.news-read-row { display: flex; align-items: center; gap: 16px; }
+.news-read-row .line { flex: 0 0 auto; height: 1px; background: #ccc; width: 40px; transition: width 0.35s ease, background-color 0.35s ease; }
+.news-card:hover .news-read-row .line { width: 80px; background-color: var(--green); }
+.news-read-row a { color: var(--text); text-decoration: none; font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s, gap 0.25s; }
+.news-card:hover .news-read-row a { color: var(--green-dark); gap: 14px; }
+
+/* PORTFOLIO */
+.portfolio { background: var(--cream); padding: 110px 0; text-align: center; }
+.portfolio h2 { font-size: 46px; margin-bottom: 10px; line-height: 1.15; }
+.portfolio h2 .green { color: var(--green); }
+.portfolio .subhead { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 56px; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.port-card { background: white; padding: 20px 20px 32px; transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94); }
+.port-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(62,46,40,0.12); }
+.port-imgwrap { position: relative; width: 100%; aspect-ratio: 1/1; overflow: hidden; margin-bottom: 20px; isolation: isolate; }
+.port-imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
+.port-imgwrap::before { content: ""; position: absolute; inset: 0; background: linear-gradient(20deg, rgba(124,179,66,0.75), rgba(124,179,66,0.35)); opacity: 0; transition: opacity 0.4s ease; z-index: 1; pointer-events: none; }
+.port-imgwrap::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; padding-top: 0; background-color: var(--green); opacity: 0.25; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94) 0.1s; pointer-events: none; z-index: 2; }
+.port-card:hover .port-imgwrap img { transform: scale(1.06); }
+.port-card:hover .port-imgwrap::before { opacity: 1; }
+.port-card:hover .port-imgwrap::after { width: 140%; padding-top: 140%; opacity: 0.45; border-radius: 35%; }
+.port-card .cat { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 15px; margin-bottom: 10px; display: block; transition: color 0.25s ease; }
+.port-card:hover .cat { color: var(--green-dark); }
+.port-card h3 { font-size: 19px; margin-bottom: 20px; line-height: 1.3; min-height: 50px; transition: color 0.25s ease; }
+.port-card:hover h3 { color: var(--green-dark); }
+.port-card a { display: inline-block; background: var(--brown); color: white; padding: 12px 22px; text-decoration: none; font-family: 'Roboto Slab', serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; transition: all 0.25s ease; }
+.port-card:hover a { background: var(--green); color: white; }
+
+/* FEATURES STRIP */
+.features-strip { position: relative; padding: 110px 0; background-color: var(--grey-warm); background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=60'); background-blend-mode: luminosity; background-size: cover; background-position: center; }
+.features-strip::before { content: ""; position: absolute; inset: 0; background: rgba(232,227,219,0.92); }
+.features-strip .container { position: relative; z-index: 1; }
+.features-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 80px; row-gap: 48px; }
+.feature { display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start; cursor: default; }
+.feature-icon { width: 72px; height: 72px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brown); box-shadow: 0 6px 14px rgba(62,46,40,0.08); transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94); }
+.feature-icon svg { width: 30px; height: 30px; transition: transform 0.4s ease; }
+.feature:hover .feature-icon { background: var(--green); color: white; box-shadow: 0 10px 22px rgba(124,179,66,0.35); transform: translateY(-4px); }
+.feature:hover .feature-icon svg { animation: iconBob 1.2s ease-in-out infinite; }
+.feature h3 { font-size: 21px; margin-bottom: 10px; transition: color 0.25s ease; }
+.feature:hover h3 { color: var(--green-dark); }
+@keyframes iconBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.feature p { color: var(--text-soft); font-size: 14px; line-height: 1.7; }
+
+/* WHY */
+.why { padding: 110px 0; background: var(--cream); text-align: center; }
+.why h2 { font-size: 46px; margin-bottom: 10px; line-height: 1.15; }
+.why h2 .green { color: var(--green); }
+.why .subhead { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 80px; }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; text-align: left; }
+.why-card { background: white; padding: 70px 38px 40px; position: relative; box-shadow: 0 8px 24px rgba(62,46,40,0.06); transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94); }
+.why-card:hover { transform: translateY(-10px); box-shadow: 0 24px 50px rgba(62,46,40,0.14); }
+.why-card-icon { position: absolute; top: -34px; left: 38px; width: 68px; height: 68px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 14px rgba(124,179,66,0.35); transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.why-card:hover .why-card-icon { transform: scale(1.12) rotate(-8deg); background: var(--gold); box-shadow: 0 10px 24px rgba(184,146,74,0.4); }
+.why-card-icon svg { width: 30px; height: 30px; }
+.why-card .eyebrow { font-style: italic; font-size: 14px; }
+.why-card h3 { font-size: 20px; margin-bottom: 14px; transition: color 0.25s ease; }
+.why-card:hover h3 { color: var(--green-dark); }
+.why-card p { color: var(--text-soft); font-size: 14px; line-height: 1.7; }
+
+/* QUOTE SPLIT */
+.quote-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 640px; }
+.quote-photo { position: relative; background: url('https://images.unsplash.com/photo-1734079692160-fcbe4be6ab96?auto=format&fit=crop&w=1200&q=80') center/cover; }
+.quote-photo-overlay { position: absolute; top: 50%; left: 60px; transform: translateY(-50%); background: rgba(124,179,66,0.88); color: white; padding: 36px 42px; max-width: 320px; }
+.quote-photo-overlay .eyebrow { color: white; opacity: 0.9; font-size: 14px; margin-bottom: 8px; }
+.quote-photo-overlay h3 { color: white; font-size: 30px; line-height: 1.1; font-family: 'Roboto Slab', serif; font-weight: 700; }
+.quote-form-side { background: var(--brown); color: white; padding: 80px 70px; display: flex; flex-direction: column; justify-content: center; }
+.quote-form-side .eyebrow { color: var(--gold); font-size: 15px; font-style: italic; margin-bottom: 8px; }
+.quote-form-side h2 { color: white; font-size: 38px; margin-bottom: 36px; font-family: 'Roboto Slab', serif; }
+.q-field { padding: 14px 0 12px; border: none; border-bottom: 1px solid var(--gold); background: transparent; color: white; width: 100%; font-family: inherit; font-size: 14px; margin-bottom: 10px; outline: none; }
+.q-field::placeholder { color: rgba(255,255,255,0.6); }
+.q-field:focus { border-bottom-color: var(--green); }
+select.q-field option { background: var(--brown); color: white; }
+.q-send { margin-top: 20px; width: 100%; background: var(--green); color: white; padding: 18px; border: none; font-family: 'Roboto Slab', serif; font-size: 13px; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; cursor: pointer; text-align: right; padding-right: 30px; transition: background 0.2s; }
+.q-send:hover { background: var(--green-dark); }
+
+/* TESTI */
+.testi { padding: 110px 0; background: white; }
+.testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.testi-left { padding-right: 30px; }
+.testi-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.testi-head .eyebrow { margin-bottom: 0; }
+.testi-head h2 { font-size: 32px; margin-top: 6px; }
+.testi-arrows { display: flex; gap: 14px; color: var(--gold); font-size: 20px; }
+.testi-arrows span { cursor: pointer; }
+.testi-quote { font-family: 'Libre Baskerville', serif; font-style: italic; font-size: 16px; line-height: 1.85; color: var(--text-soft); margin-bottom: 32px; position: relative; padding-left: 40px; }
+.testi-quote::before { content: "\201C"; font-family: 'Roboto Slab', serif; font-weight: 800; font-size: 64px; color: var(--grey-warm); position: absolute; top: -22px; left: 0; line-height: 1; }
+.testi-author { display: flex; align-items: center; gap: 14px; }
+.testi-author img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+.testi-author-name { font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 17px; }
+.testi-author-role { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 13px; }
+.testi-right img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+
+/* CALL STRIP */
+.call-strip { position: relative; padding: 90px 0; background: url('https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; align-items: center; }
+.call-strip::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.18); }
+.call-strip .container { position: relative; z-index: 1; }
+.call-card { background: rgba(62,46,40,0.94); padding: 48px 56px; max-width: 560px; color: white; }
+.call-card .eyebrow { color: var(--gold); font-style: italic; font-size: 14px; margin-bottom: 6px; }
+.call-card h2 { color: white; font-size: 32px; font-family: 'Roboto Slab', serif; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--gold); line-height: 1.2; }
+.phone-row { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
+.phone-icon { width: 44px; height: 44px; color: var(--gold); }
+.phone-icon svg { width: 38px; height: 38px; }
+.phone-label { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 13px; margin-bottom: 2px; display: block; }
+.phone-num { font-family: 'Roboto Slab', serif; font-weight: 700; color: white; font-size: 28px; text-decoration: none; letter-spacing: 0.02em; }
+.call-chat { display: inline-flex; align-items: center; gap: 16px; background: var(--gold); color: white; padding: 14px 22px; text-decoration: none; font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 22px; transition: background 0.2s; }
+.call-chat:hover { background: var(--gold-light); }
+.call-card p { font-size: 14px; line-height: 1.7; opacity: 0.9; }
+
+/* TEAM */
+.team { padding: 110px 0 90px; background: white; text-align: center; }
+.team h2 { font-size: 46px; margin-bottom: 10px; }
+.team h2 .green { color: var(--green); }
+.team .subhead { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 60px; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.team-card { background: white; box-shadow: 0 6px 20px rgba(62,46,40,0.06); padding: 10px 10px 28px; transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94); }
+.team-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(62,46,40,0.14); }
+.team-imgwrap { position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; margin-bottom: 18px; isolation: isolate; }
+.team-imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
+.team-imgwrap::before { content: ""; position: absolute; inset: 0; background: linear-gradient(20deg, rgba(124,179,66,0.7), rgba(124,179,66,0.3)); opacity: 0; transition: opacity 0.4s ease; z-index: 1; pointer-events: none; }
+.team-imgwrap::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; padding-top: 0; background-color: var(--green); opacity: 0.25; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94) 0.1s; pointer-events: none; z-index: 2; }
+.team-card:hover .team-imgwrap img { transform: scale(1.06); }
+.team-card:hover .team-imgwrap::before { opacity: 1; }
+.team-card:hover .team-imgwrap::after { width: 140%; padding-top: 140%; opacity: 0.4; border-radius: 35%; }
+.team-card h4 { font-size: 17px; margin-bottom: 4px; transition: color 0.25s ease; }
+.team-card:hover h4 { color: var(--green-dark); }
+.team-card .role { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--text-soft); font-size: 13px; }
+.team-arrows { margin-top: 40px; display: flex; justify-content: center; gap: 6px; }
+.team-arrows span { width: 42px; height: 42px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+.team-arrows span:hover { background: var(--green-dark); }
+
+/* FEAT3 */
+.feat3 { padding: 100px 0; background: white; text-align: center; }
+.feat3 h2 { font-size: 42px; margin-bottom: 10px; }
+.feat3 h2 .green { color: var(--green); }
+.feat3 .subhead { font-family: 'Libre Baskerville', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 70px; }
+.feat3-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
+.feat3-item { text-align: center; }
+.feat3-icon { width: 64px; height: 64px; margin: 0 auto 24px; color: var(--brown); }
+.feat3-icon svg { width: 100%; height: 100%; stroke-width: 1.2; }
+.feat3-item h4 { font-size: 20px; margin-bottom: 14px; }
+.feat3-item p { color: var(--text-soft); font-size: 14px; line-height: 1.75; max-width: 280px; margin: 0 auto; }
+.feat3-ctas { display: flex; justify-content: center; gap: 14px; }
+
+/* FOOTER */
+footer { background: var(--brown); color: rgba(255,255,255,0.75); padding: 70px 0 0; font-size: 13px; }
+.ft-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 50px; }
+.ft-nav { display: flex; gap: 30px; }
+.ft-nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-family: 'Roboto Slab', serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+.ft-nav a:hover { color: var(--green-light); }
+.ft-social { display: flex; gap: 18px; }
+.ft-social a { color: rgba(255,255,255,0.5); transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94); display: inline-flex; }
+.ft-social a:hover { color: var(--green-light); transform: translateY(-3px); }
+.ft-grid { display: grid; grid-template-columns: 1.1fr 1fr 1.2fr; gap: 60px; margin-bottom: 50px; }
+.ft-col h4 { color: white; font-size: 16px; margin-bottom: 22px; font-family: 'Roboto Slab', serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.ft-col p { font-size: 13px; line-height: 1.75; margin-bottom: 18px; }
+.ft-col p em { font-family: 'Libre Baskerville', serif; font-style: italic; }
+.ft-sub { display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 10px; }
+.ft-sub input { flex: 1; background: transparent; border: none; color: white; font-family: inherit; font-size: 14px; outline: none; padding: 6px 0; }
+.ft-sub input::placeholder { color: rgba(255,255,255,0.5); }
+.ft-sub button { background: transparent; border: none; color: white; font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; }
+.ft-contact-row { display: flex; gap: 10px; margin-bottom: 12px; font-size: 13px; }
+.ft-contact-row strong { color: white; font-weight: 600; font-family: 'Roboto Slab', serif; }
+.ft-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.ft-photos a { display: block; position: relative; overflow: hidden; aspect-ratio: 1/1; }
+.ft-photos a::after { content: ""; position: absolute; inset: 0; background: rgba(124,179,66,0); transition: background 0.3s ease; z-index: 1; }
+.ft-photos a:hover::after { background: rgba(124,179,66,0.5); }
+.ft-photos img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.ft-photos a:hover img { transform: scale(1.1); }
+.ft-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 26px 0; display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
+.ft-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; margin-left: 20px; }
+.ft-bottom a:hover { color: var(--green-light); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 1024px) {
+  .container { padding: 0 24px; }
+  .nav { gap: 22px; }
+  .nav a { font-size: 13px; }
+  .hero { height: 580px; }
+  .hero-card { padding: 44px 44px; margin-left: 40px; max-width: 500px; }
+  .hero-card h1 { font-size: 42px; }
+  .intro { padding: 80px 0; }
+  .intro-grid { grid-template-columns: 1fr; gap: 60px; }
+  .intro-left h2 { font-size: 36px; }
+  .news-grid { grid-template-columns: 1fr 1fr; }
+  .news-intro { grid-column: 1 / -1; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+  .features-grid { grid-template-columns: 1fr; gap: 32px; }
+  .why-grid { grid-template-columns: 1fr; gap: 48px; max-width: 500px; margin: 0 auto; }
+  .quote-split { grid-template-columns: 1fr; }
+  .quote-photo { min-height: 340px; }
+  .quote-form-side { padding: 60px 40px; }
+  .testi-grid { grid-template-columns: 1fr; gap: 48px; }
+  .testi-right { max-width: 420px; }
+  .team-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .feat3-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ft-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .ft-col.wide { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+  .topbar { display: none; }
+  .nav { display: none; }
+  .burger { display: flex; }
+  .hero { height: 560px; }
+  .hero-card { margin: 0 16px; padding: 32px 26px; max-width: calc(100% - 32px); }
+  .hero-card .eyebrow { text-align: center; font-size: 15px; }
+  .hero-card h1 { font-size: 32px; text-align: center; }
+  .hero-card p { text-align: center; font-size: 14px; margin-bottom: 22px; }
+  .hero-buttons { flex-direction: column; gap: 10px; }
+  .btn { width: 100%; padding: 16px 22px; }
+  .hero { align-items: center; padding: 20px 0; }
+  .hero-arrows { top: auto; bottom: 30px; transform: none; }
+  .hero-arrow { width: 36px; height: 36px; }
+  .intro { padding: 60px 0; }
+  .intro-left h2 { font-size: 28px; }
+  .process-grid { grid-template-columns: 1fr; gap: 28px; }
+  .intro-photos { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .intro-photos .p2 { margin-top: 20px; }
+  .intro-photos .p4 { margin-top: -10px; }
+  .tiles-3up { grid-template-columns: 1fr; }
+  .tile { padding: 48px 32px; min-height: 320px; }
+  .news { padding: 60px 0; }
+  .news-grid { grid-template-columns: 1fr; gap: 40px; }
+  .news-intro h2 { font-size: 28px; }
+  .portfolio { padding: 60px 0; }
+  .portfolio h2, .why h2, .team h2, .feat3 h2 { font-size: 30px; }
+  .portfolio-grid { grid-template-columns: 1fr; gap: 20px; }
+  .features-strip { padding: 60px 0; }
+  .feature { grid-template-columns: 60px 1fr; gap: 18px; }
+  .feature-icon { width: 56px; height: 56px; }
+  .feature h3 { font-size: 18px; }
+  .why { padding: 70px 0 60px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-card { padding: 60px 26px 32px; }
+  .quote-form-side { padding: 48px 26px; }
+  .quote-form-side h2 { font-size: 28px; }
+  .quote-photo-overlay { left: 20px; right: 20px; max-width: none; padding: 26px 28px; }
+  .quote-photo-overlay h3 { font-size: 24px; }
+  .testi { padding: 60px 0; }
+  .testi-left { padding-right: 0; }
+  .testi-head h2 { font-size: 26px; }
+  .call-strip { padding: 60px 0; }
+  .call-card { padding: 36px 26px; }
+  .call-card h2 { font-size: 24px; }
+  .phone-num { font-size: 22px; }
+  .team { padding: 70px 0 60px; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .feat3 { padding: 60px 0; }
+  .feat3-ctas { flex-direction: column; align-items: center; gap: 10px; }
+  .feat3-ctas .btn { width: 260px; }
+  footer { padding: 50px 0 0; }
+  .ft-top { flex-direction: column; gap: 24px; padding-bottom: 28px; margin-bottom: 36px; }
+  .ft-nav { flex-wrap: wrap; justify-content: center; gap: 18px 22px; }
+  .ft-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 32px; }
+  .ft-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  .ft-bottom div:last-child a:first-child { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      <a href="mailto:info@atlantaprofessionallandscaping.com">✉ info@atlantaprofessionallandscaping.com</a>
+    </div>
+    <div class="topbar-right">
+      <div class="social">
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Houzz"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 10v12h-5v-6H11v6H6V2l12 8z"/></svg></a>
+      </div>
+      <span class="divider">|</span>
+      <a href="#quote" class="link">Request a Quote</a>
+      <span class="divider">|</span>
+      <a href="tel:7704340933" class="link green">📞 770-434-0933</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-main">ATLANTA<span>PROFESSIONAL</span></div>
+      <div class="logo-tag">landscaping · since 2006</div>
+    </a>
+    <nav class="nav">
+      <a href="#" class="active">Home <span class="nav-caret">▼</span></a>
+      <a href="#">About <span class="nav-caret">▼</span></a>
+      <a href="#">Landscaping <span class="nav-caret">▼</span></a>
+      <a href="#">Commercial</a>
+      <a href="#">Financing</a>
+      <a href="#quote">Contact</a>
+    </nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-card">
+    <span class="eyebrow">Serving Atlanta Metro Since 2006</span>
+    <h1>Your Outdoor Oasis, Delivered</h1>
+    <p>Professional landscape design, installation, maintenance, hardscapes, irrigation, and drainage — for residential and commercial properties across the Atlanta metro area.</p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn btn-green">Our Services</a>
+      <a href="#quote" class="btn btn-brown">Request A Quote</a>
+    </div>
+  </div>
+  <div class="hero-arrows">
+    <button class="hero-arrow" aria-label="Previous">‹</button>
+    <button class="hero-arrow" aria-label="Next">›</button>
+  </div>
+</section>
+
+<!-- INTRO / PROCESS -->
+<section class="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-left">
+        <span class="eyebrow">Over 30 years of combined experience</span>
+        <h2>Expert Landscape Design, Installation &amp; Maintenance.</h2>
+        <p>Since 2006, we've provided homeowners and property managers across the Atlanta metro area with dependable lawn care and landscape services. Our staff of highly trained professionals has knowledge in every aspect of the industry — and we're committed to delivering consistent, exceptional service regardless of your budget or the size of the job.</p>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-head"><div class="step-num">1</div><div class="step-line"></div></div>
+            <h3>Landscape Design &amp; Installation</h3>
+            <p>Custom landscape plans and installations — we'll listen to your vision and bring it to life.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-head"><div class="step-num">2</div><div class="step-line"></div></div>
+            <h3>Landscape Maintenance</h3>
+            <p>Weekly lawn care, seasonal cleanups, and ongoing maintenance for residential and commercial properties.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-head"><div class="step-num">3</div><div class="step-line"></div></div>
+            <h3>Hardscapes &amp; Outdoor Living</h3>
+            <p>Patios, outdoor kitchens, walkways, and entertaining spaces — the outdoor oasis of your dreams.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-head"><div class="step-num">4</div><div class="step-line"></div></div>
+            <h3>Irrigation &amp; Drainage</h3>
+            <p>Sprinkler systems and drainage solutions that protect and sustain your landscape investment.</p>
+          </div>
+        </div>
+
+        <a href="#services" class="btn btn-green">View All Services</a>
+      </div>
+
+      <div class="intro-photos">
+        <div class="photo-wrap p1"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=600&q=80" alt="Atlanta residential landscape"></div>
+        <div class="photo-wrap p2"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Landscape installation"></div>
+        <div class="photo-wrap p3"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80" alt="Stone walkway and patio"></div>
+        <div class="photo-wrap p4"><img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=600&q=80" alt="Commercial lawn maintenance"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3-UP TILES -->
+<section class="tiles-3up">
+  <div class="tile tile-green">
+    <svg class="tile-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 26 C4 20, 10 18, 16 18 S 28 20, 28 26 Z"/>
+      <path d="M16 18 C16 10, 20 6, 24 6 C24 12, 20 16, 16 18 Z"/>
+      <path d="M16 18 C16 12, 12 9, 9 9"/>
+    </svg>
+    <span class="eyebrow">Improve Your Home</span>
+    <h3>New Landscaping Or A New Patio — We Can Greatly Improve Your Space.</h3>
+    <p>From fresh plantings to outdoor kitchens to full landscape design, we'll enhance your property in ways you can feel every time you step outside.</p>
+    <a href="#" class="tile-read">Read More <span class="arrow">→</span></a>
+  </div>
+  <div class="tile tile-brown">
+    <svg class="tile-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="16" cy="14" r="6"/>
+      <path d="M10 14 L4 14 M22 14 L28 14 M16 20 L16 28"/>
+      <circle cx="16" cy="14" r="2.5"/>
+    </svg>
+    <span class="eyebrow">Why Choose Us</span>
+    <h3>Positive, Informative, And Fun.</h3>
+    <p>Serving the metro Atlanta area since 2006. We want your experience to be easy from the first phone call — honest estimates, clear communication, quality work.</p>
+    <a href="#" class="tile-read">Read More <span class="arrow">→</span></a>
+  </div>
+  <div class="tile tile-green2">
+    <svg class="tile-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 26 L26 26 M16 26 L16 10"/>
+      <path d="M16 10 C12 10, 10 7, 10 4 C14 4, 16 7, 16 10 Z"/>
+      <path d="M16 10 C20 10, 22 7, 22 4 C18 4, 16 7, 16 10 Z"/>
+    </svg>
+    <span class="eyebrow">Quality Control</span>
+    <h3>Peace Of Mind That Your Investment Will Last.</h3>
+    <p>Our team treats your lawn with the same care we give our own yards. We go above and beyond to bring your vision to life — and we stand behind every project.</p>
+    <a href="#" class="tile-read">Read More <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="news">
+  <div class="container">
+    <div class="news-grid">
+      <div class="news-intro">
+        <span class="eyebrow">Expert Tips And Advice</span>
+        <h2>Landscape &amp; Lawn Care Notes</h2>
+        <p>Practical guidance for Atlanta homeowners and property managers — planting, patios, irrigation, drainage, and everything in between.</p>
+        <a href="#" class="btn btn-outline-green">See All Posts</a>
+      </div>
+      <div class="news-card">
+        <div class="news-imgwrap"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" alt="Garden bed materials"></div>
+        <h3>Essential Garden Bed Materials To Consider</h3>
+        <div class="news-meta">Apr 12, 2026 · <span class="cat">In: Landscape Design</span></div>
+        <div class="news-read-row"><span class="line"></span><a href="#">Read More →</a></div>
+      </div>
+      <div class="news-card">
+        <div class="news-imgwrap"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Irrigation systems"></div>
+        <h3>Choosing The Right Irrigation System For Your Yard</h3>
+        <div class="news-meta">Apr 4, 2026 · <span class="cat">In: Irrigation</span></div>
+        <div class="news-read-row"><span class="line"></span><a href="#">Read More →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="services">
+  <div class="container">
+    <h2><span class="green">Five Core</span> Landscape Services.</h2>
+    <p class="subhead">Residential &amp; commercial, every service in-house</p>
+    <div class="portfolio-grid">
+      <div class="port-card">
+        <div class="port-imgwrap"><img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=500&q=80" alt="Landscape design"></div>
+        <span class="cat">Plan &amp; Plant</span>
+        <h3>Landscape Design &amp; Installation</h3>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="port-card">
+        <div class="port-imgwrap"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=500&q=80" alt="Weekly lawn maintenance"></div>
+        <span class="cat">Weekly &amp; Seasonal</span>
+        <h3>Landscape Maintenance</h3>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="port-card">
+        <div class="port-imgwrap"><img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=500&q=80" alt="Patio and hardscape"></div>
+        <span class="cat">Patios &amp; Outdoor Living</span>
+        <h3>Hardscape Construction</h3>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="port-card">
+        <div class="port-imgwrap"><img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=500&q=80" alt="Irrigation and drainage"></div>
+        <span class="cat">Water Management</span>
+        <h3>Irrigation &amp; Drainage</h3>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<section class="features-strip">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L17 7 L12 12 L7 7 Z"/><path d="M12 12 V22"/></svg>
+        </div>
+        <div>
+          <h3>Weekly Lawn Care</h3>
+          <p>Mowing, edging, and blowing delivered on a reliable schedule — for homes and commercial properties alike.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3 V12 L18 15"/></svg>
+        </div>
+        <div>
+          <h3>Outdoor Kitchens &amp; Patios</h3>
+          <p>Full-design hardscape projects — patios, outdoor kitchens, fire features, and entertaining spaces built to last.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 C8 8 4 11 4 16 A8 8 0 0 0 20 16 C20 11 16 8 12 2 Z"/></svg>
+        </div>
+        <div>
+          <h3>Irrigation Installation</h3>
+          <p>Automatic sprinkler and drip systems sized and zoned to keep your landscape thriving through Atlanta summers.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 L9 4 L15 18 L21 4"/><path d="M3 20 L21 20"/></svg>
+        </div>
+        <div>
+          <h3>Drainage Solutions</h3>
+          <p>French drains, grading, and surface drainage to keep water moving where it should — and away from where it shouldn't.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22 L6 10 M18 22 L18 10"/><path d="M6 10 C6 6 10 4 12 4 C14 4 18 6 18 10 Z"/></svg>
+        </div>
+        <div>
+          <h3>Landscape Lighting</h3>
+          <p>Path, accent, and feature lighting that extends the use and the beauty of your outdoor space after sundown.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7 V4 H16 V7"/></svg>
+        </div>
+        <div>
+          <h3>Commercial Services</h3>
+          <p>From office parks to HOAs to golf courses — full-service landscape maintenance for property managers and businesses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <h2><span class="green">Why Atlanta</span> Chooses Us.</h2>
+    <p class="subhead">Four reasons homeowners and property managers keep coming back</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg>
+        </div>
+        <span class="eyebrow">Experience</span>
+        <h3>30+ Years Combined, Since 2006</h3>
+        <p>Our team brings decades of combined landscaping expertise — knowledge you can feel in every detail of every job.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 10 L12 5 L17 10"/><path d="M12 5 V19"/><path d="M5 19 L19 19"/></svg>
+        </div>
+        <span class="eyebrow">Honest Estimates</span>
+        <h3>We Listen, Then We Quote</h3>
+        <p>A landscaping company that listens to your needs and provides honest estimates — no upsells, no surprises in the final bill.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 C8 8 4 11 4 16 A8 8 0 0 0 20 16 C20 11 16 8 12 2 Z"/></svg>
+        </div>
+        <span class="eyebrow">Full-Service</span>
+        <h3>Residential &amp; Commercial, In-House</h3>
+        <p>Design, install, maintain, irrigate, drain — all from one team. No subcontractors juggling the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE SPLIT -->
+<section class="quote-split" id="quote">
+  <div class="quote-photo">
+    <div class="quote-photo-overlay">
+      <span class="eyebrow">Let's Get Started</span>
+      <h3>Request A Landscaping Quote</h3>
+    </div>
+  </div>
+  <div class="quote-form-side">
+    <span class="eyebrow">Honest Estimates</span>
+    <h2>Tell Us About Your Project</h2>
+    <input class="q-field" type="text" placeholder="Full Name">
+    <input class="q-field" type="email" placeholder="Email Address">
+    <input class="q-field" type="tel" placeholder="Phone Number">
+    <input class="q-field" type="text" placeholder="Subject">
+    <select class="q-field">
+      <option disabled selected>Service Interested In</option>
+      <option>Landscape Design &amp; Installation</option>
+      <option>Landscape Maintenance</option>
+      <option>Hardscapes / Outdoor Living</option>
+      <option>Irrigation Installation</option>
+      <option>Drainage Solutions</option>
+      <option>Commercial Landscape Services</option>
+    </select>
+    <textarea class="q-field" rows="2" placeholder="Message — residential or commercial, scope, timeline..."></textarea>
+    <button class="q-send">Send Message →</button>
+  </div>
+</section>
+
+<!-- TESTIMONIAL / PROMISE -->
+<section class="testi">
+  <div class="container">
+    <div class="testi-grid">
+      <div class="testi-left">
+        <div class="testi-head">
+          <div>
+            <span class="eyebrow">Our Promise</span>
+            <h2>We Handle All The Stress</h2>
+          </div>
+          <div class="testi-arrows">
+            <span>←</span><span>→</span>
+          </div>
+        </div>
+        <p class="testi-quote">We understand that taking on a landscaping project can be overwhelming, which is why we handle all of the stress. We'll treat your lawn with the same care we give our own yards, listen to your needs, and provide honest estimates. All you have to do is relax and let us take on the job.</p>
+        <div class="testi-author">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=150&q=80" alt="Atlanta Professional Landscaping team">
+          <div>
+            <div class="testi-author-name">The APL Team</div>
+            <div class="testi-author-role">Atlanta Metro Area · Since 2006</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-right">
+        <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=700&q=80" alt="Landscape work in progress">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL STRIP -->
+<section class="call-strip">
+  <div class="container">
+    <div class="call-card">
+      <span class="eyebrow">Prefer To Talk?</span>
+      <h2>Call Today — Honest Estimates.</h2>
+      <div class="phone-row">
+        <div class="phone-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <span class="phone-label">Call Us Now</span>
+          <a href="tel:7704340933" class="phone-num">770-434-0933</a>
+        </div>
+      </div>
+      <a href="#quote" class="call-chat">Or Message Us <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+      <p>Serving the greater Atlanta metro area. Financing available for qualifying projects through Lyon Financial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="container">
+    <h2><span class="green">Highly Trained</span> Landscape Professionals.</h2>
+    <p class="subhead">Knowledge in every aspect of the landscape industry</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-imgwrap"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Design lead"></div>
+        <h4>Design Lead</h4>
+        <div class="role">Landscape Design &amp; Installation</div>
+      </div>
+      <div class="team-card">
+        <div class="team-imgwrap"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Maintenance lead"></div>
+        <h4>Maintenance Lead</h4>
+        <div class="role">Residential &amp; Commercial</div>
+      </div>
+      <div class="team-card">
+        <div class="team-imgwrap"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Hardscape lead"></div>
+        <h4>Hardscape Lead</h4>
+        <div class="role">Patios, Walls &amp; Outdoor Living</div>
+      </div>
+      <div class="team-card">
+        <div class="team-imgwrap"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="Irrigation specialist"></div>
+        <h4>Irrigation Specialist</h4>
+        <div class="role">Sprinklers &amp; Drainage</div>
+      </div>
+    </div>
+    <div class="team-arrows">
+      <span>←</span><span>→</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEAT3 -->
+<section class="feat3">
+  <div class="container">
+    <h2><span class="green">One Call</span> Is All It Takes.</h2>
+    <p class="subhead">From first estimate to finished project</p>
+    <div class="feat3-grid">
+      <div class="feat3-item">
+        <div class="feat3-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M24 12 V24 L32 30"/></svg>
+        </div>
+        <h4>Since 2006</h4>
+        <p>Two decades in business, 30+ years of combined experience. Atlanta landscapes are what we do all day, every day.</p>
+      </div>
+      <div class="feat3-item">
+        <div class="feat3-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4 C14 4, 8 12, 8 22 C8 32, 24 44, 24 44 S40 32, 40 22 C40 12, 34 4, 24 4 Z"/><circle cx="24" cy="22" r="5"/></svg>
+        </div>
+        <h4>Residential &amp; Commercial</h4>
+        <p>From backyard patios to golf course maintenance — we have the tools, the team, and the experience for any property type.</p>
+      </div>
+      <div class="feat3-item">
+        <div class="feat3-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="34" rx="2"/><path d="M6 18 L42 18 M14 4 V12 M34 4 V12"/></svg>
+        </div>
+        <h4>Financing Available</h4>
+        <p>Financing available for qualifying projects through Lyon Financial — making your dream outdoor space more accessible.</p>
+      </div>
+    </div>
+    <div class="feat3-ctas">
+      <a href="#quote" class="btn btn-green">Request A Quote</a>
+      <a href="tel:7704340933" class="btn btn-brown">Call 770-434-0933</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-top">
+      <div class="ft-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#services">Services</a>
+        <a href="#">Commercial</a>
+        <a href="#">Financing</a>
+        <a href="#quote">Contact</a>
+      </div>
+      <div class="ft-social">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Houzz"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 10v12h-5v-6H11v6H6V2l12 8z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="ft-grid">
+      <div class="ft-col">
+        <h4>Expert Tips &amp; Advice</h4>
+        <p><em>"We'll design and build the outdoor living space of your dreams — and stand behind every project."</em></p>
+        <p>Practical guidance for Atlanta homeowners and property managers — planting, patios, irrigation, drainage.</p>
+        <form class="ft-sub" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="ft-col">
+        <h4>Contact Info</h4>
+        <div class="ft-contact-row"><strong>Service Area:</strong> Greater Atlanta Metro, GA</div>
+        <div class="ft-contact-row"><strong>Phone:</strong> 770-434-0933</div>
+        <div class="ft-contact-row"><strong>Email:</strong> info@atlantaprofessionallandscaping.com</div>
+        <div class="ft-contact-row"><strong>Serving:</strong> Residential &amp; commercial</div>
+      </div>
+      <div class="ft-col">
+        <h4>Recent Projects</h4>
+        <div class="ft-photos">
+          <a href="#"><img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?auto=format&fit=crop&w=200&q=60" alt=""></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=200&q=60" alt=""></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=200&q=60" alt=""></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=200&q=60" alt=""></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=200&q=60" alt=""></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=200&q=60" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <div>© 2006 — 2026 Atlanta Professional Landscaping · All Rights Reserved</div>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">ADA Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('form').forEach(f => f.addEventListener('submit', e => e.preventDefault()));
+</script>
+
+</body>
+</html>
