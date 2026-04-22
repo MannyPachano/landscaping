@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/ensure-hero-avif-variants.mjs",
+    "predev": "node scripts/ensure-hero-avif-variants.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

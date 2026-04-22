@@ -6,3 +6,8 @@ dist
 .env.*
 !.env.example
 npm-debug.log*
+# Built from img7.avif during prebuild (or replaced by `npm run optimize:images`)
+public/images/img7-640.avif
+public/images/img7-960.avif
+public/images/img11-640.avif
+public/images/img11-960.avif

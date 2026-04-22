@@ -3,6 +3,10 @@ import '../styles/template-2.css';
 import bodyHtml from '../bodies/template-2.html?raw';
 import TemplatePicker from '../components/TemplatePicker.astro';
 
+import robotoSlab800 from '@fontsource/roboto-slab/files/roboto-slab-latin-800-normal.woff2?url';
+import nunitoSans400 from '@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2?url';
+import libreBaskervilleItalic from '@fontsource/libre-baskerville/files/libre-baskerville-latin-400-italic.woff2?url';
+
 const title = 'Greenfield Landscaping — Beautiful landscapes, made simple.';
 const description =
   'Landscape design, installation, lawn maintenance, and hardscapes from a local full-service team. Free quotes.';
@@ -29,6 +33,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      imagesrcset="/images/img11-640.avif 640w, /images/img11-960.avif 960w, /images/img11.avif 1920w"
+      imagesizes="100vw"
+    />
+    <link rel="preload" href={robotoSlab800} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={nunitoSans400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={libreBaskervilleItalic} as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <TemplatePicker currentPath={Astro.url.pathname} />

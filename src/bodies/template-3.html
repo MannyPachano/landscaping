@@ -41,7 +41,25 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" aria-hidden="true">
+    <picture>
+      <source
+        type="image/avif"
+        srcset="/images/img7-640.avif 640w, /images/img7-960.avif 960w, /images/img7.avif 1400w"
+        sizes="100vw"
+      >
+      <img
+        class="hero-bg-img"
+        src="/images/img7.png"
+        alt=""
+        width="1400"
+        height="788"
+        decoding="sync"
+        fetchpriority="high"
+        sizes="100vw"
+      >
+    </picture>
+  </div>
   <svg class="hero-leaf left" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
     <g fill="#c8e080" opacity="0.9">
       <path d="M70 10 C 40 30, 25 60, 30 100 C 50 80, 65 55, 70 10 Z"/>
@@ -107,7 +125,7 @@
         <div class="about-img">
           <picture>
             <source srcset="/images/img6.avif" type="image/avif">
-            <img src="/images/img6.png" alt="Beautifully landscaped property" width="900" height="600" loading="lazy">
+            <img src="/images/img6.png" alt="Beautifully landscaped property" width="900" height="600" loading="lazy" sizes="(max-width: 1024px) 100vw, 42vw">
           </picture>
         </div>
       </div>
@@ -274,7 +292,7 @@
       <div class="project-card reveal" data-cat="hardscape">
         <picture>
           <source srcset="/images/img6.avif" type="image/avif">
-          <img src="/images/img6.png" alt="Stone retaining wall" width="900" height="600" loading="lazy">
+          <img src="/images/img6.png" alt="Stone retaining wall" width="900" height="600" loading="lazy" sizes="(max-width: 1024px) 100vw, 50vw">
         </picture>
         <div class="project-body">
           <div class="tag">Residential</div>
@@ -681,16 +699,11 @@
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       const filter = tab.dataset.filter;
-      projects.forEach(p => {
-        const cat = p.dataset.cat;
-        if (filter === 'all' || cat === filter) {
-          p.style.display = '';
-          setTimeout(() => { p.style.opacity = '1'; p.style.transform = 'none'; }, 10);
-        } else {
-          p.style.opacity = '0';
-          p.style.transform = 'translateY(20px)';
-          setTimeout(() => { p.style.display = 'none'; }, 300);
-        }
+      requestAnimationFrame(() => {
+        projects.forEach(p => {
+          const show = filter === 'all' || p.dataset.cat === filter;
+          p.classList.toggle('is-filter-hidden', !show);
+        });
       });
     });
   });

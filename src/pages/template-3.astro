@@ -3,6 +3,10 @@ import '../styles/template-3.css';
 import bodyHtml from '../bodies/template-3.html?raw';
 import TemplatePicker from '../components/TemplatePicker.astro';
 
+import dmSerifLatin400 from '@fontsource/dm-serif-display/files/dm-serif-display-latin-400-normal.woff2?url';
+import jostLatin500 from '@fontsource/jost/files/jost-latin-500-normal.woff2?url';
+import caveatLatin500 from '@fontsource/caveat/files/caveat-latin-500-normal.woff2?url';
+
 const title = 'Greenfield Landscaping — Beautiful landscapes, made simple.';
 const description =
   'Full-service landscape design, installation, lawn maintenance, hardscapes, and lighting from a local team. Free quotes.';
@@ -29,6 +33,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      imagesrcset="/images/img7-640.avif 640w, /images/img7-960.avif 960w, /images/img7.avif 1400w"
+      imagesizes="100vw"
+    />
+    <link rel="preload" href={dmSerifLatin400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={jostLatin500} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={caveatLatin500} as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <TemplatePicker currentPath={Astro.url.pathname} />
